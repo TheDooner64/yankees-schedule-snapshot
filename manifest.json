@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "yankees-schedule-snapshot",
+  "description": "Chrome extension to provide a snapshot of the New York Yankees schedule",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/baseball-icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

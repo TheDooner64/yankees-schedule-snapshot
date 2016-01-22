@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+  <title>Yankees Schedule Snapshot</title>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-controller='ScheduleCtrl'>
+  <nav class="navbar navbar-fixed-top">
+    <div id="schedule-title">
+      <h5>NY Yankees Schedule</h5>
+    </div>
+  </nav>
+
+  <div class="container" id="games-container">
+    <div class='row'>
+      <div class='col-md-12'>
+
+          <ul ng-repeat="game in shortSchedule" class="game">
+
+            <li class="game-date">{{ game.gameTimeET | date: 'EEEE, M/d/yy' }}</li>
+            <li class="teams">{{ game.awayTeamShort }} @ {{ game.homeTeamShort }}</li>
+
+            <li class="venue">
+              {{ game.venueCity }},
+              <br>
+              {{ game.venue }}
+            </li>
+
+            <li ng-show="game.tvBroadcast">
+              <div class="glyphicon glyphicon-picture"></div>
+              <div class="broadcast">{{ game.tvBroadcast }}</div>
+            </li>
+
+            <li ng-show="game.radioBroadcast">
+              <div class="glyphicon glyphicon-headphones"></div>
+              <div class="broadcast">{{ game.radioBroadcast }}</div>
+            </li>
+
+            <div class="ticket-link" ng-click="navigateToTickeLink(game)">Buy Tickets!</div>
+
+          </ul>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="lib/jquery/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/schedule/schedule.js"></script>
+  <script type="text/javascript" src="app/schedule/schedule.factory.js"></script>
+  <script type="text/javascript" src="app/schedule/schedule.controller.js"></script>
+</body>
+
+</html>

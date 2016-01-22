@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background: rgba(26, 37, 63, 0.85);
+  z-index: 100;
+}
+
+#schedule-title {
+  width: 100%;
+  padding-top: 7px;
+  text-align: center;
+  color: #FCFCFC;
+}
+
+#games-container {
+  margin-top: 50px;
+}
+
+.game {
+  display: block;
+  background-color: #EDEDED;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.game li {
+  list-style-type: none;
+}
+
+.game-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.teams {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.venue {
+  display: inline-block;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.broadcast {
+  text-align: left;
+  font-size: 10px;
+  display: inline;
+}
+
+.glyphicon {
+  font-size: 10px;
+  text-align: left;
+}
+
+.ticket-link {
+  display: block;
+  font-style: italic;
+  font-size: 10px;
+  margin-top: 10px;
+  color: blue;
+  text-align: center;
+}
+
+.ticket-link:hover {
+  cursor: pointer;
+}
