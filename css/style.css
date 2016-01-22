@@ -51,11 +51,23 @@ body {
 
 .game-date {
   text-align: center;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.game-time {
+  text-align: center;
   margin-bottom: 10px;
   font-size: 10px;
 }
 
 .teams {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 10px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -77,6 +89,10 @@ body {
 .glyphicon {
   font-size: 10px;
   text-align: left;
+}
+
+.glyphicon-menu-hamburger {
+  display: inline;
 }
 
 .ticket-link {

@@ -21,7 +21,10 @@
           <ul ng-repeat="game in shortSchedule" class="game">
 
             <li class="game-date">{{ game.gameTimeET | date: 'EEEE, M/d/yy' }}</li>
+            <li class="game-time">{{ game.gameTimeET | date: 'h:mm a' }}</li>
+
             <li class="teams">{{ game.awayTeamShort }} @ {{ game.homeTeamShort }}</li>
+<!--             <li class="details">Show details <span class="glyphicon glyphicon-plus"></span></li> -->
 
             <li class="venue">
               {{ game.venueCity }},
@@ -30,7 +33,7 @@
             </li>
 
             <li ng-show="game.tvBroadcast">
-              <div class="glyphicon glyphicon-picture"></div>
+              <div class="glyphicon glyphicon-film"></div>
               <div class="broadcast">{{ game.tvBroadcast }}</div>
             </li>
 
