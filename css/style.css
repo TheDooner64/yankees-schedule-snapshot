@@ -42,7 +42,7 @@ body {
   padding: 10px;
   padding-bottom: 20px;
   margin: 20px 0px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .game li {
@@ -64,11 +64,13 @@ body {
 .teams {
   text-align: center;
   margin-bottom: 10px;
+  display: inline;
 }
 
-.details {
-  font-size: 10px;
+.game-details {
+  font-size: 12px;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -86,13 +88,19 @@ body {
   display: inline;
 }
 
-.glyphicon {
+.team-info-container {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.glyphicon-headphones, .glyphicon-film {
   font-size: 10px;
   text-align: left;
 }
 
-.glyphicon-menu-hamburger {
+.glyphicon-info-sign {
   display: inline;
+  text-align: center;
 }
 
 .ticket-link {

@@ -28,6 +28,7 @@ angular.module('app').factory('ScheduleFactory', function() {
     this.tvBroadcast = tvBroadcast;
     this.radioBroadcast = radioBroadcast;
     this.ticketLink = ticketLink;
+    this.isCollapsed = true;
   }
 
   ScheduleFactory.sendSchedule = function() {
@@ -35,11 +36,13 @@ angular.module('app').factory('ScheduleFactory', function() {
     var gameCounter = 0;
     var currentDate = Date.now() - 1; // Subtract 1 so it includes today's game
 
+    console.log("Current date: ", currentDate);
+
     for (var i = 0; i < fullRawSchedule.length; i++) {
       var rawGame = fullRawSchedule[i];
 
       var year = rawGame.game_time_et.slice(0, 4);
-      var month = rawGame.game_time_et.slice(4, 6);
+      var month = parseInt(rawGame.game_time_et.slice(4, 6)) - 1;
       var day = rawGame.game_time_et.slice(6, 8);
       var timeOfDay = rawGame.game_time_et.slice(18);
       var hours = timeOfDay === 'AM' ? parseInt(rawGame.game_time_et.slice(9, 11)).toString() : (parseInt(rawGame.game_time_et.slice(9, 11)) + 12).toString();
