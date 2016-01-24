@@ -24,7 +24,7 @@
             <li class="game-time">{{ game.gameTimeET | date: 'h:mm a' }}</li>
 
             <li class="team-info-container">
-              <div class="teams">{{ game.awayTeamShort }} @ {{ game.homeTeamShort }} </div>
+              <div class="teams">{{ game.awayTeamShort }} @ {{ game.homeTeamShort }}</div>
               <div class="glyphicon glyphicon-info-sign" ng-click="toggleDetail(game)"></div>
             </li>
 
@@ -36,7 +36,7 @@
               </li>
 
               <li ng-show="game.tvBroadcast">
-                <div class="glyphicon glyphicon-film"></div>
+                <div class="glyphicon glyphicon-facetime-video"></div>
                 <div class="broadcast">{{ game.tvBroadcast }}</div>
               </li>
 
@@ -46,7 +46,12 @@
               </li>
             </div>
 
-            <div class="ticket-link" ng-click="navigateToTickeLink(game)">Buy Tickets!</div>
+            <div class="buy-ticket-container">
+              <button class="btn btn-sm buy-ticket" ng-click="navigateToTickeLink(game)">
+                <span class="glyphicon glyphicon-tag"></span>
+                <span class="ticket-link"> Buy Tickets!</span>
+              </button>
+            </div>
 
           </ul>
 

@@ -5,6 +5,5 @@ angular.module('app').controller('ScheduleCtrl', function($scope, ScheduleFactor
   $scope.toggleDetail = function(game) {
     if (!game.isCollapsed) game.isCollapsed = true;
     else if (game.isCollapsed) game.isCollapsed = false;
-    console.log(game.isCollapsed);
   }
 });
